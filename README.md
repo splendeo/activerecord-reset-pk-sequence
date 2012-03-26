@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-This gem adds a method to the Class ActiveRecord. Now it is shown an example of how it works.
+This gem adds a method to the class ActiveRecord::Base. Now it is shown an example of how it works.
 
 The first thing is to install the gem as it is explained before.
 
@@ -36,8 +36,8 @@ To test the gem you have to start a rails console:
 
 And then write the following commands:
 
-    p = Person.create(:name => 'Peter')
-    p = Person.create(:name => 'Peter')
+    p = Person.create(:name => 'David')
+    p = Person.create(:name => 'James')
 
 You will see that the have the id's 1 and 2, then delete all elements in the table
 
@@ -46,12 +46,15 @@ You will see that the have the id's 1 and 2, then delete all elements in the tab
 If you create a new person now you will notice that the id is going to be 3
 
     p = Person.create(:name => 'Peter')
+    id = p.id
+    => 3 
+
 
 And this is what this gem is for, to reset the id's after deleting the elements in a table, to check if it works delete all elements and then run reset_pk_sequence method, after that create a new "Person" and check if its id is 1.
 
     Person.delete_all
     Person.reset_pk_sequence
-    p = Person.create(:name => 'Peter')
+    p = Person.create(:name => 'Jhon')
 
 So to sum up to use this gem you only have to add the call to the new method after deleting all the elements in a table.
 
