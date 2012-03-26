@@ -2,11 +2,11 @@
 require File.expand_path('../lib/activerecord-reset-pk-sequence/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Sergio Díaz"]
-  gem.email         = ["sdiaz@splendeo.es"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ["Spendeo Innovación"]
+  gem.email         = ["support@splendeo.es"]
+  gem.description   = %q{Id of an AR table cleaner. Works for Postgres and Sqlite.}
+  gem.summary       = %q{Allows resetting the id of an AR table to 0. Useful after a delete_all. Works in Postgres and Sqlite (not MySQL) for now.}
+  gem.homepage      = "https://github.com/splendeo/activerecord-reset-pk-sequence"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
