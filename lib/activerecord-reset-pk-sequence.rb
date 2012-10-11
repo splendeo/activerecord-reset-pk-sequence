@@ -18,6 +18,10 @@ module ActiveRecord
         raise "Task not implemented for this DB adapter"
       end 
     end
+    def self.delete_all_and_reset
+      delete_all
+      reset_pk_sequence
+    end
   end
 end
 

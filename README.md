@@ -56,6 +56,11 @@ And this is what this gem is for, to reset the id's after deleting the elements 
     Person.reset_pk_sequence
     p = Person.create(:name => 'Jhon')
 
+You may also use the following method which do the same.
+
+    Person.delete_all_and_reset
+    p = Person.create(:name => 'Jhon')
+
 So to sum up to use this gem you only have to add the call to the new method after deleting all the elements in a table.
 
 ## Contributing
