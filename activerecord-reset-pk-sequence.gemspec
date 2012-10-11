@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "activerecord-reset-pk-sequence"
   gem.require_paths = ["lib"]
   gem.version       = Activerecord::Reset::Pk::Sequence::VERSION
+
+  gem.add_development_dependency "rake"
 end
