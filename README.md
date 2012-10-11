@@ -1,6 +1,6 @@
 # active-reset-pk-sequence
 
-This gem allows resetting the id of an AR table to 0. It is useful after a delete_all command. It works in Postgres and Sqlite but not in MySQL up to now.
+This gem allows resetting the id of an AR table to 0. It is useful after a delete_all command. It works in Postgres, Sqlite and MySQL up to now.
 
 ## Installation
 
