@@ -8,7 +8,7 @@ module ActiveRecord
         new_max = maximum(primary_key) || 0
         update_seq_sql = "UPDATE sqlite_sequence SET seq = #{new_max} WHERE name = '#{table_name}';"
         ActiveRecord::Base.connection.execute(update_seq_sql)
-      when 'Mysql'
+      when 'Mysql', 'Mysql2'
         new_max = maximum(primary_key) + 1 || 1
         update_seq_sql = "ALTER TABLE '#{table_name}' AUTO_INCREMENT = #{new_max};"
         ActiveRecord::Base.connection.execute(update_seq_sql)
